@@ -26,5 +26,48 @@
         rgba(0, 0, 0, 0.7) 50%,
         rgba(0, 0, 0, 1) 100%
         );
+}
 
+main{
+    position: relative;
+    z-index: 3;
+    display: flex;
+    height: 100vh;
+}
+
+.container-left{
+    width: 35%;
+    min-width: 300px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.caixa-pontos{
+ background-color: #fff;
+ padding: 30px;
+}
+
+.frame{
+    border: 3px solid #000;
+    border-radius: 5px;
+}
+
+.cartao-detalhes{
+ background-color: #fff;
+ padding: 1rem;  
+ display: flex; 
+ flex-direction: column;
+ align-items: center;
+ justify-content: space-between;
+ height: 6rem;
+ width: 100%;
+}
+
+#nome-cartao{
+    font-size: 0.8rem;
+}
+
+#tipo-cartao{
+    font-size: 1rem;
 }
