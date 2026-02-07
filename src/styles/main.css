@@ -1,0 +1,30 @@
+.bg-video {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: -2;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+}
+
+.video{
+    height: 100vh;
+}
+
+.bg-video::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: 
+    linear-gradient(
+        90deg, 
+        rgba(0, 0, 0, 1) 0%, 
+        rgba(0, 0, 0, 0.7) 50%,
+        rgba(0, 0, 0, 1) 100%
+        );
+
+}
