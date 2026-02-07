@@ -39,7 +39,22 @@
         <div class="container-right">
             <div class="container-caixa-cartao">
                 <div class="caixa-cartao framed" id="cartas-computador"> </div>
-                <div class="carta-virada"></div>
+                <div class="carta-vs">
+                    <div class="vs-top">
+                        <div class="card-infield">
+                            <img id="cartao-field-jogador"
+                            height="180px" width="125px">
+                        </div>
+                        <img src="./src/assets/icons/millenium2.png" height="100px" >
+                        <div class="card-infield">
+                            <img id="cartao-field-computador"
+                            height="180px" width="125px">
+                        </div>
+                    </div>
+                    <div class="vs-bottom">
+                        <button class="rpgui-button" id="proximo-duelo" onclick="reiniciarDuelo()" >GANHOU</button>
+                    </div>
+                </div>
                 <div class="caixa-cartao framed" id="cartas-jogador"> </div>
             </div>
         </div>
