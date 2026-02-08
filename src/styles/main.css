@@ -43,6 +43,10 @@ main{
     justify-content: space-around;
 }
 
+.container-right{
+    width: 65%;
+}
+
 .caixa-pontos{
  background-color: #fff;
  padding: 30px;
@@ -71,3 +75,52 @@ main{
 #tipo-cartao{
     font-size: 1rem;
 }
+
+
+.container-caixa-cartao{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0.3rem;
+}
+
+.carta-vs{
+    display: flex;
+    flex-direction: column;
+    padding: 0.1rem;
+    height: 300px;
+    margin-top: 5rem;
+}
+
+.vs-top, .vs-bottom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vs-bottom{
+    margin-top: 1rem;
+}
+
+#proximo-duelo{
+    display: none;
+}
+
+.caixa-cartao{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0.1rem;
+    height: 9rem;
+    width: 100%;
+}
+
+.card-infield{
+    height: 11.2rem;
+    width: 8rem;
+    border-radius: 8px;
+}
+
+
