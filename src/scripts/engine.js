@@ -91,11 +91,35 @@ async function setCardField(cardId){
 
     let duelResult = await checkDuelResult(cardId, computerCardId);
 
-//    await updateScore();
-//    await drawbutton(duelResult)
+    await updateScore();
+    await drawbutton(duelResult)
 }
 
+async function drawbutton(text){
+    state.actions.button.innerText = text;
+    state.actions.button.style.display = "block";
+}
 
+async function updateScore(){
+    state.score.caixaPontos.innerText = `win : ${state.score.pontosJogador} | lose: ${state.score.pontosComputador}`;
+}
+
+async function checkDuelResult(playerCardId, computerCardId){
+    let duelResult = "empate";
+    let playerCard = cardData[playerCardId];
+
+    if(playerCard.winOf.includes(computerCardId)){
+        duelResult = "ganhou";
+        state.score.pontosJogador++;
+    }
+     
+    if(playerCard.loseOf.includes(computerCardId)){
+        duelResult = "perdeu";
+        state.score.pontosComputador++;
+    }
+
+    return duelResult;
+}
 
 async function removeAllCardsImages(){
     let {computerBOX, player1BOX}= state.playerSides;
