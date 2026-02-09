@@ -23,7 +23,7 @@ De forma geral:
 * Ao selecionar uma carta, ela entra em confronto com a carta do oponente
 * O resultado depende dos valores ou regras definidas no JavaScript
 
-Jogos desse tipo normalmente usam a lógica de comparar atributos das cartas para decidir quem vence a rodada, simulando um duelo simplificado. ([GitHub][1])
+Jogos desse tipo normalmente usam a lógica de comparar atributos das cartas para decidir quem vence a rodada, simulando um duelo simplificado. 
 
 A interação acontece diretamente na página, sem carregar outra tela.
 
