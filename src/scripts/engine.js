@@ -86,6 +86,10 @@ async function setCardField(cardId){
    state.fieldCards.jogador.style.display = "block";
    state.fieldCards.computador.style.display = "block";
 
+   state.imagemCards.avatar.src = ""
+   state.imagemCards.nome.innerText = "selecione"
+   state.imagemCards.tipo.innerText = "uma carta"
+
    state.fieldCards.jogador.src = cardData[cardId].img;
    state.fieldCards.computador.src = cardData[computerCardId].img;
 
@@ -164,8 +168,14 @@ async function playaudio(status){
 }
 
 function init(){
+    state.fieldCards.jogador.style.display = "none";
+    state.fieldCards.computador.style.display = "none";
+
     drawCards(5, state.playerSides.player1);
     drawCards(5, state.playerSides.computer);
+
+    const bgMusic = document.getElementById("bg-musica");
+    bgMusic.play();
 }
 
 init();
