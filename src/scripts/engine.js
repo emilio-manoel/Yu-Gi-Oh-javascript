@@ -146,6 +146,16 @@ async function drawCards(cardNumbers, fieldSide){
     }
 }
 
+async function resetDuel(){
+    state.imagemCards.avatar.src = "";
+    state.actions.button.style.display = "none";
+    
+    state.fieldCards.jogador.style.display = "none";
+    state.fieldCards.computador.style.display = "none";
+    
+    init();
+}
+
 function init(){
     drawCards(5, state.playerSides.player1);
     drawCards(5, state.playerSides.computer);
