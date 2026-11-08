@@ -1,11 +1,25 @@
 @reference "tailwindcss";
 
+body {
+  cursor: url("@/assets/cursor/yugicursor.png"), default;
+}
+
+button,
+a,
+.cursor-glow,
+[role="button"],
+img:hover,
+button:hover,
+a:hover {
+  cursor: url("@/assets/cursor/yamiyugicursorGLOW.png"), pointer;
+}
+
 @utility rpgui-container {
   @apply fixed z-10 overflow-visible;
 }
 
 @utility framed {
-  @apply border-solid border-[15px] p-3 box-border 
+  @apply border-solid border-15 p-3 box-border 
          bg-repeat bg-clip-padding bg-origin-padding bg-center;
   
   border-image-source: url("@/assets/rpg/border-image.png");
@@ -16,7 +30,7 @@
 }
 
 @utility framed-golden {
-  @apply border-solid border-[15px] p-3 box-border 
+  @apply border-solid border-15 p-3 box-border 
          bg-repeat bg-clip-padding bg-origin-padding bg-center;
   
   border-image-source: url("@/assets/rpg/border-image-golden.png");
@@ -27,7 +41,7 @@
 }
 
 @utility framed-golden-2 {
-  @apply border-solid border-[15px] p-3 box-border 
+  @apply border-solid border-15 p-3 box-border 
          bg-repeat bg-clip-padding bg-origin-padding bg-center;
   
   border-image-source: url("@/assets/rpg/border-image-golden2.png");
@@ -46,4 +60,38 @@
   border-image-slice: 3;
   border-image-width: 7px;
   background-image: url("@/assets/rpg/background-image-grey.png");
+}
+
+@utility rpgui-button {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  overflow: hidden;
+  outline: none;
+  background: url("@/assets/rpg/button.png") no-repeat center;
+  background-clip: padding-box;
+  background-origin: padding-box;
+  background-size: 100% 100%;
+  font-size: 0.85rem;
+  max-width: 100%;
+  min-width: 160px;
+  height: 60px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 25px;
+  padding-right: 25px;
+  font-family: inherit;
+  color: #000;
+  cursor: url("@/assets/cursor/yamiyugicursorGLOW.png"), pointer;
+  transition: transform 0.1s ease;
+
+  &:hover {
+    background-image: url("@/assets/rpg/button-hover.png");
+  }
+
+  &:active {
+    background-image: url("@/assets/rpg/button-down.png");
+    transform: translateY(2px);
+  }
 }
