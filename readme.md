@@ -1,86 +1,35 @@
-# 🃏 Yu-Gi-Oh JavaScript Game
+# React + TypeScript + Vite
 
-## 📌 Sobre o projeto
+This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 
-Este projeto é um **jogo inspirado no universo de Yu-Gi-Oh** desenvolvido utilizando **HTML, CSS e JavaScript**.
-A ideia principal é simular uma pequena experiência de duelo de cartas dentro do navegador, focando mais na lógica do jogo e na interação do usuário do que nas regras completas do TCG original.
+Currently, two official plugins are available:
 
-O jogo roda diretamente no navegador, sem necessidade de instalação.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-**Acesse o projeto:**
-[https://emilio-manoel.github.io/Yu-Gi-Oh-javascript/](https://emilio-manoel.github.io/Yu-Gi-Oh-javascript/)
+## React Compiler
 
----
+The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
 
-## 🎮 Como o jogo funciona
+Note: This will impact Vite dev & build performances.
+You can also try [the experimental native React Compiler support in plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md#rust-react-compiler) by using `compiler: true` in the plugin options instead of using the Babel plugin.
 
-O jogo é baseado em um sistema simples de batalhas com cartas.
+## Expanding the Oxlint configuration
 
-De forma geral:
+If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
 
-* O jogador pode escolher cartas disponíveis na tela
-* Cada carta possui atributos (como ataque ou tipo)
-* Ao selecionar uma carta, ela entra em confronto com a carta do oponente
-* O resultado depende dos valores ou regras definidas no JavaScript
+```json
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["react", "typescript", "oxc"],
+  "options": {
+    "typeAware": true
+  },
+  "rules": {
+    "react/rules-of-hooks": "error",
+    "react/only-export-components": ["warn", { "allowConstantExport": true }]
+  }
+}
+```
 
-Jogos desse tipo normalmente usam a lógica de comparar atributos das cartas para decidir quem vence a rodada, simulando um duelo simplificado. ([GitHub][1])
-
-A interação acontece diretamente na página, sem carregar outra tela.
-
----
-
-## 🧠 Como a lógica foi construída (explicado simples)
-
-### HTML
-
-O HTML organiza:
-
-* Área do jogador
-* Área do oponente
-* Cartas exibidas na tela
-* Botões ou interações
-
-Ou seja, ele define **onde cada elemento do jogo aparece**.
-
----
-
-### CSS
-
-O CSS deixa o jogo mais visual:
-
-* Estiliza as cartas
-* Define cores e layout do campo
-* Organiza os elementos lado a lado
-* Melhora a experiência visual
-
-Ele é responsável pela **aparência do duelo**.
-
----
-
-### JavaScript
-
-O JavaScript controla toda a mecânica:
-
-* Seleção de cartas
-* Eventos de clique
-* Comparação de valores
-* Resultado da rodada
-* Atualização da interface
-
-É o JavaScript que faz o jogo realmente **funcionar**.
-
----
-
-## 🎯 Objetivo do projeto
-
-Este projeto foi criado com foco em:
-
-* Praticar manipulação do DOM
-* Trabalhar com eventos
-* Criar lógica de jogo
-* Treinar organização de código
-* Simular um sistema de batalha simples
-
-Projetos de cartas em JavaScript costumam usar dados das cartas e lógica de comparação para criar interações dinâmicas no navegador. 
-
----
+See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
