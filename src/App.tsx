@@ -1,15 +1,10 @@
-import './styles/theme.css'
-import CardsBot from './components/CardsBot'
-import CardsPlayer from './components/CardsPlayer'
 import LeftContainer from './components/LeftContainer'
 import RightContainer from './components/RightContainer'
 
 function App() {
   
   return (
-    <main>
-    <CardsBot/>
-    <CardsPlayer/>
+    <main className="relative z-3 flex h-screen">
     <LeftContainer/>
     <RightContainer/>
     </main>
