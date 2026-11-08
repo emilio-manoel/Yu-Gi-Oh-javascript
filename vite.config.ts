@@ -16,5 +16,5 @@ export default defineConfig({
       '@': path.resolve(import.meta.dirname, './src'), 
     },
   },
-  base: 'https://github.com/emilio-manoel/Yu-Gi-Oh-javascript'
+  base: '/Yu-Gi-Oh-javascript/',
 })
